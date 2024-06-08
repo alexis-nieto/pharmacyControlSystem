@@ -4,7 +4,7 @@ public interface Product {
 	
 	//public void sell();
 	
-	public void showDetails();
+	public void report();
 	
 	public void verifyExpirationDate();
 

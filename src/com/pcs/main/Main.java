@@ -1,12 +1,18 @@
 package com.pcs.main;
 
-//import com.pcs.items.ProductBase;
+import java.time.LocalDate;
+
+import com.pcs.items.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-		//ProductBase test = new ProductBase();
+		
+		LocalDate expirationDate = LocalDate.of(2000, 06, 21);
+		
+		ProductMedicine medicine = new ProductMedicine("Testinol", 10.95f, 7, expirationDate);
+		
+		medicine.report();
 		
 	}
 

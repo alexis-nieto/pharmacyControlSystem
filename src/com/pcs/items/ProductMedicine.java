@@ -10,7 +10,7 @@ public class ProductMedicine extends ProductBase {
 
 	public ProductMedicine(String name, float price, int stock, LocalDate expirationDate) {
 		super(name, price, stock);
-		this.expirationDate = expirationDate;
+		setExpirationDate(expirationDate);
 	}
 	
 	// Getters and Setters
@@ -39,6 +39,30 @@ public class ProductMedicine extends ProductBase {
 		
 		System.out.println(report.toString());
 		
+		// Release memory
+		report = null;
+		
+	}
+	
+	@Override
+	public void verifyExpirationDate() {
+		
+		LocalDate today = LocalDate.now();
+		
+	    if (getExpirationDate().equals(today)) {
+	        System.out.println("Item expired today.");
+	      } else if (getExpirationDate().isBefore(today)) {
+		        System.out.println(
+		        		"Item has already expired. " +
+		        		"Expired on " +
+		        		getExpirationDate()
+		        		);	      } else {
+	        System.out.println(
+	        		"Item has not expired yet. " +
+	        		"Will expire on " +
+	        		getExpirationDate()
+	        		);
+	     }
 	}
 	
 

@@ -58,7 +58,7 @@ public abstract class ProductBase implements Product {
 		
 		if (saleStock > getStock() ) {
 			
-		    throw new IllegalArgumentException("Sale stock cannot be larger than currrent stock.");
+		    throw new IllegalArgumentException("Sale cannot be higher than currrent stock.");
 			
 		} else {
 			
@@ -68,22 +68,8 @@ public abstract class ProductBase implements Product {
 		
 	}
 
-	public void report() {
-		
-		StringBuilder report = new StringBuilder();
-		
-		report.append("\n");
-		report.append("Name: " + getName() + "\n");
-		report.append("Price: $" + getPrice() + "\n");
-		report.append("Stock: " + getStock() + " units\n");
-		
-		System.out.println(report.toString());
-		
-	}
+	public void report() {}
 	
-	public void verifyExpirationDate() {
-		
-	}
+	public void verifyExpirationDate() {}
 
-	
 }

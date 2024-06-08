@@ -1,5 +1,8 @@
 package com.pcs.items;
 
+import com.pcs.annotations.IgnoreExpiration;
+
+@IgnoreExpiration
 public class ProductCosmetic extends ProductBase {
 	
 	private String brand;

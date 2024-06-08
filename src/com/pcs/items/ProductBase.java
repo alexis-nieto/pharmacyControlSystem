@@ -1,5 +1,7 @@
 package com.pcs.items;
 
+import java.time.LocalDate;
+
 import com.pcs.interfaces.Product;
 
 public abstract class ProductBase implements Product {
@@ -71,5 +73,9 @@ public abstract class ProductBase implements Product {
 	public void report() {}
 	
 	public void verifyExpirationDate() {}
+	
+	public LocalDate getExpirationDate() {
+		return null;
+	}
 
 }

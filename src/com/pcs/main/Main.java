@@ -1,10 +1,12 @@
 package com.pcs.main;
 
+//import com.pcs.items.ProductBase;
+
 public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello, World!");
+		//ProductBase test = new ProductBase();
 		
 	}
 

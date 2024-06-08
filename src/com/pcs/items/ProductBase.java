@@ -8,37 +8,15 @@ public abstract class ProductBase implements Product {
 	private float price;
 	private int stock;
 	
-	// Methods
-
-	public void sell(int saleStock) {
-		
-		if (saleStock > getStock() ) {
-			
-		    throw new IllegalArgumentException("Value cannot be larger than currrent stock.");
-			
-		} else {
-			
-			setStock( getStock() - saleStock );
-			
-		}
-		
+	
+	// Constructor
+	
+	public ProductBase(String name, float price, int stock) {
+		setName(name);
+		setPrice(price);
+		setStock(stock);
 	}
 	
-	public void showDetails() {
-		
-		StringBuilder report = new StringBuilder();
-		
-		report.append("Name: " + getName());
-		report.append("Price: $" + getPrice());
-		report.append("Stock: " + getStock() + " units");
-		
-		System.out.println(report.toString());
-		
-	}
-	
-	public void verifyExpirationDate() {
-		
-	}
 	
 	// Getters and Setters
 
@@ -72,5 +50,39 @@ public abstract class ProductBase implements Product {
 			this.stock = stock;
 		}
 	}
+	
+	
+	// Methods
+
+	public void sell(int saleStock) {
+		
+		if (saleStock > getStock() ) {
+			
+		    throw new IllegalArgumentException("Value cannot be larger than currrent stock.");
+			
+		} else {
+			
+			setStock( getStock() - saleStock );
+			
+		}
+		
+	}
+
+	public void showDetails() {
+		
+		StringBuilder report = new StringBuilder();
+		
+		report.append("Name: " + getName());
+		report.append("Price: $" + getPrice());
+		report.append("Stock: " + getStock() + " units");
+		
+		System.out.println(report.toString());
+		
+	}
+	
+	public void verifyExpirationDate() {
+		
+	}
+
 	
 }
